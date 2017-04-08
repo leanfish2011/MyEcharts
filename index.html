@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>ECharts-Demo</title>
+</head>
+<body>
+    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="container1" style="height: 400px"></div>
+    <div id="container2" style="height: 400px"></div>
+    <div id="container3" style="height: 400px"></div>
+    <div id="container4" style="height: 400px"></div>
+    <!-- ECharts文件引入 -->
+    <script src="MyECharts/resource/ECharts/echarts.js"></script>
+    <script src="MyECharts/resource/MyECharts.js"></script>
+    <script type="text/javascript">
+        var data1 = [
+            { group: 'Beijing', name: '1月', value: 10 },
+            { group: 'Beijing', name: '2月', value: 15 },
+            { group: 'Beijing', name: '3月', value: 12 },
+            { group: 'Beijing', name: '4月', value: 14 },
+            { group: 'Tokyo', name: '1月', value: 12 },
+            { group: 'Tokyo', name: '2月', value: 15 },
+            { group: 'Tokyo', name: '3月', value: 2 },
+            { group: 'Tokyo', name: '4月', value: 14 }];
+
+        var opt1 = MyECharts.ChartOptionTemplates.Bar('各个城市气温趋势', '°C', data1);
+        MyECharts.RenderChart(opt1, 'container1');
+
+        var data2 = [
+            { group: 'Beijing', name: '1月', value: 10 },
+            { group: 'Beijing', name: '2月', value: 15 },
+            { group: 'Beijing', name: '3月', value: 12 },
+            { group: 'Beijing', name: '4月', value: 14 },
+            { group: 'Tokyo', name: '1月', value: 12 },
+            { group: 'Tokyo', name: '2月', value: 15 },
+            { group: 'Tokyo', name: '3月', value: 2 },
+            { group: 'Tokyo', name: '4月', value: 14 }];
+
+        var opt2 = MyECharts.ChartOptionTemplates.Line('各个城市气温趋势', '°C', data2);
+        MyECharts.RenderChart(opt2, 'container2');
+
+        var data3 = [
+            { name: 'Firefox', value: 45.0 },
+            { name: 'IE', value: 26.8 },
+            { name: 'Safari', value: 8.5 },
+            { name: 'Opera', value: 6.2 },
+            { name: '其他', value: 0.7 }];
+
+        var opt3 = MyECharts.ChartOptionTemplates.Pie('浏览器占比例', '%', data3);
+        MyECharts.RenderChart(opt3, 'container3');
+
+
+        var dataAll = [
+        [
+            [10.0, 8.04],
+            [8.0, 6.95],
+            [13.0, 7.58],
+            [9.0, 8.81],
+            [11.0, 8.33],
+            [14.0, 9.96],
+            [6.0, 7.24],
+            [4.0, 4.26],
+            [12.0, 10.84],
+            [7.0, 4.82],
+            [5.0, 5.68]
+        ],
+        [
+            [10.0, 9.14],
+            [8.0, 8.14],
+            [13.0, 8.74],
+            [9.0, 8.77],
+            [11.0, 9.26],
+            [14.0, 8.10],
+            [6.0, 6.13],
+            [4.0, 3.10],
+            [12.0, 9.13],
+            [7.0, 7.26],
+            [5.0, 4.74]
+        ],
+        [
+            [10.0, 7.46],
+            [8.0, 6.77],
+            [13.0, 12.74],
+            [9.0, 7.11],
+            [11.0, 7.81],
+            [14.0, 8.84],
+            [6.0, 6.08],
+            [4.0, 5.39],
+            [12.0, 8.15],
+            [7.0, 6.42],
+            [5.0, 5.73]
+        ],
+        [
+            [8.0, 6.58],
+            [8.0, 5.76],
+            [8.0, 7.71],
+            [8.0, 8.84],
+            [8.0, 8.47],
+            [8.0, 7.04],
+            [8.0, 5.25],
+            [19.0, 12.50],
+            [8.0, 5.56],
+            [8.0, 7.91],
+            [8.0, 6.89]
+        ]
+        ];
+
+        var opt4 = MyECharts.ChartOptionTemplates.Scatter('Anscombe\'s quartet', '', dataAll);
+        MyECharts.RenderChart(opt4, 'container4');
+    </script>
+</body>
