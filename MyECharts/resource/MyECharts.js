@@ -129,7 +129,7 @@ var MyECharts = {
                     temp_series = { name: groups[i], type: type, data: temp_data };
                     series.push(temp_series);
                 }
-                return { category: names, series: series };
+                return { legend: groups,category: names, series: series };
             }
         },
     //生成图形
@@ -140,11 +140,24 @@ var MyECharts = {
             var option = {
                 title: {
                     text: title || '',
-                    subtext: subtext || '',
-                    x: 'center'
+                    subtext: subtext || ''
+                },
+                legend: {
+                    data:datas.legend
                 },
                 tooltip: {
-                    show: true
+                	 trigger: 'axis'
+                },
+                calculable : true,
+                toolbox: {
+                    show : true,
+                    feature : {
+                        mark : {show: true},
+                        dataView : {show: true, readOnly: false},
+                        magicType : {show: true, type: ['line', 'bar']},
+                        restore : {show: true},
+                        saveAsImage : {show: true}
+                    }
                 },
                 xAxis: [
                 {
@@ -167,8 +180,10 @@ var MyECharts = {
             var option = {
                 title: {
                     text: title || '',
-                    subtext: subtext || '',
-                    x: 'center'
+                    subtext: subtext || ''
+                },
+                legend: {
+                    data:datas.legend
                 },
                 tooltip: {
                     show: true
@@ -194,8 +209,7 @@ var MyECharts = {
             var option = {
                 title: {
                     text: title || '',
-                    subtext: subtext || '',
-                    x: 'center'
+                    subtext: subtext || ''
                 },
                 tooltip: {
                     show: true,
