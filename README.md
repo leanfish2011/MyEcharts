@@ -8,5 +8,5 @@
 ![代码实例](http://images.cnblogs.com/cnblogs_com/yangtze-yufei/860899/o_%e4%bb%a3%e7%a0%81.png)
 
 ## TODO
-> 1、有很多特性没有使用到，待研究ECharts官方文档。
+> 1、有很多特性没有使用到，待研究ECharts官方文档；
 > 2、数据组织还很繁琐。
